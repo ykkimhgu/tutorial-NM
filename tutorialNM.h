@@ -18,5 +18,10 @@ Description      : myNM.h
 // Initial contents
 void printArray(double xin[]);
 
+// Added new function
+void displayArray(double xin[]);
+
+// Added new function 
+void displayArrays(double xin[], double yin[]);
 
 #endif
