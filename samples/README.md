@@ -1,12 +1,5 @@
-# tutorial-NM
+## tutorial-NM
 
-Hello! Modified in website 2021-05-20 17:10
+This folder should cotain simple example codes of using your library functions. 
 
-Hello again! Modified in website 2021-05-20 17:14
-
-
-
-Hello,  I modified in Desktop 2021-05-20: 17:24
-
-
-Hello again. I modified in website 2021-05-20 17:45
+## DO NOT show the internal(definition) codes of your functions. Just show how to use it.
