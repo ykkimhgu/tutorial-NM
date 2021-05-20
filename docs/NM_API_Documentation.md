@@ -1,38 +1,8 @@
-Uploaded in Github site
-
-# Non-Linear Solver
-
-
-
-```c
-# include  "myNM.h"
-```
-
-
-
-## newtonRaphson()
-
-Finds the solution of a non-linear equation with the given range.‌
-
-```C
- void newtonraphson()
-```
-
-**Parameters**
-
-- vector type m
-
-
-
-------
-
-
+`#include "myNM.h"`
 
 
 
 # Linear Solver
-
-
 
 ## gaussElim()
 
@@ -73,9 +43,7 @@ extern Matrix solveLinear(Matrix _A, Matrix _b, char* _method)
 
   
 
-#### Examples
-
-exit: Ctrl+↩
+#### Example code
 
 ```C
 double A_array[] = { 1, 3, -2, 4,		2, -3, 3, -1,		-1, 7, -4, 2,		-1, 7, -4, 2 };
@@ -89,23 +57,44 @@ Matrix invA_gj = inv(matA, "gj");
 Matrix invA_lu = inv(matA, "LU");
 ```
 
+See full example code:  TutorialDifferentiation.cpp
+
+***
 
 
-------
 
-# Vector/Matrix Operation
+# Numerical Differentiation
 
-### Matrix Addition 
+## gradient()
+
+Solves for numerical gradient  (dy/dt) from  a set of discrete data
 
 ```c
-extern	Matrix	addMat(Matrix _A, Matrix _B);
+Matrix	gradient(Matrix _t, Matrix _y);
 ```
 
-### Matrix Subtraction 
+#### **Parameters**
 
-### Matrix Multiplication
+- **t**:  vector **t** in structure Matrix form.  Should be (nx1) vector
+- **y**:  vector  **y** in structure Matrix form.  Should be (nx1) vector and same length as t
+- Returns **dydt** in structure Matrix form. Output is also (nx1) vector
 
-### Dot Product
 
-### Vector Norm
+
+#### Example code
+
+```c
+Matrix t = txt2Mat("", "Q1_vect");
+Matrix x = txt2Mat("", "Q1_vecx");
+
+Matrix vel = gradient(t, x);
+Matrix acc = gradient(t, vel);
+
+printMat(t, "t");
+printMat(x, "x");
+printMat(vel, "vel");
+printMat(acc, "acc");
+```
+
+See full example code:  TutorialDifferentiation.cpp
 
