@@ -57,7 +57,7 @@ Matrix invA_gj = inv(matA, "gj");
 Matrix invA_lu = inv(matA, "LU");
 ```
 
-See full example code:  TutorialDifferentiation.cpp
+See full example code:  TutorialLU.cpp
 
 ***
 
