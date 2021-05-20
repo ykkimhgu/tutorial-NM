@@ -36,14 +36,6 @@ Matrix	backSub(Matrix _A, Matrix _b)
 	Matrix Out = createMat(_b.rows, 1);
 
 	// error check: whether _A is a triangular matrix
-
-	//for (int i = _A.rows; i > 0; i--) {
-	//	double temp = 0;
-	//	for (int j = i + 1; j <= _A.cols; j++)
-	//		temp += _A.at[i - 1][j - 1] * Out.at[j - 1][0];
-	//	Out.at[i - 1][0] = (_b.at[i - 1][0] - temp) / _A.at[i - 1][i - 1];
-	//}
-
 	for (int i = _A.rows-1; i >= 0; i--) {
 		double temp = 0;
 		for (int j = i + 1; j < _A.cols; j++)
@@ -63,36 +55,6 @@ Matrix	gradientFunc(double func(const double x), Matrix xin) {
 	Matrix yin = createMat(n, 1);
 	for (int i = 0; i < n; i++)
 		yin.at[i][0] = func(xin.at[i][0]);
-
-	return gradient(xin, yin);
-}
-
-// Return the dy/dx results for the target equation. (truncation error: O(h^2))
-Matrix	gradientFunc3(double func(const double x), double dfunc(const double x), Matrix xin) {
-
-	int n = xin.rows;
-
-	Matrix yin = createMat(n, 1);
-	Matrix dyin = createMat(n, 1);
-
-	for (int i = 0; i < n; i++)
-	{
-		yin.at[i][0] = func(xin.at[i][0]);		
-		dyin.at[i][0] = dfunc(xin.at[i][0]);
-		printf("At i=[%d], yin=%f and dy=%f \n", i, yin.at[i][0], dyin.at[i][0]);
-	}
-	return yin;
-}
-
-
-// Return the dy/dx results for the target equation. (truncation error: O(h^2))
-Matrix	gradientFunc2(void func(const double x, double *y), Matrix xin) {
-
-	int n = xin.rows;
-
-	Matrix yin = createMat(n, 1);
-	for (int i = 0; i < n; i++)
-		func(xin.at[i][0], &yin.at[i][0]);
 
 	return gradient(xin, yin);
 }

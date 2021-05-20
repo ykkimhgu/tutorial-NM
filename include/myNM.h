@@ -23,10 +23,7 @@ extern	Matrix	backSub(Matrix _A, Matrix _b);
 // Return the dy/dx results for the input data. (truncation error: O(h^2))
 Matrix	gradient(Matrix _x, Matrix _y);
 
-
 // Return the dy/dx results for the target equation. (truncation error: O(h^2))
 Matrix	gradientFunc(double func(const double x), Matrix xin);
-Matrix	gradientFunc2(void func(const double x, double *y), Matrix xin);
-Matrix	gradientFunc3(double func(const double x), double dfunc(const double x), Matrix xin);
 
 #endif
