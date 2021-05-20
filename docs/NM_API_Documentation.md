@@ -98,5 +98,5 @@ printMat(vel, "vel");
 printMat(acc, "acc");
 ```
 
-See full example code:  TutorialDifferentiation.cpp
+See full example code:  [TutorialDifferentiation.cpp](https://github.com/ykkimhgu/tutorial-NM/blob/main/samples/Tutorial-Differentiation.cpp)
 
