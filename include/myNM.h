@@ -14,6 +14,11 @@ Description      : myNM.h
 
 #include "myMatrix.h"
 
+// New function for assignment
+void tempFunction(int m);
+
+
+
 // Matrix addition
 extern	Matrix	addMat(Matrix _A, Matrix _B);
 

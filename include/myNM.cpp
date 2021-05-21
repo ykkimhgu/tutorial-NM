@@ -11,6 +11,9 @@ Description      : myNM.cpp
 
 #include "myNM.h"
 
+void tempFunction(int m) {
+
+}
 
 // Matrix addition
 Matrix	addMat(Matrix _A, Matrix _B)
