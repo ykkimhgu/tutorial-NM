@@ -17,6 +17,7 @@ Description      : myNM.h
 // New function for assignment
 void tempFunction(int m);
 
+// Function mdified
 
 
 // Matrix addition

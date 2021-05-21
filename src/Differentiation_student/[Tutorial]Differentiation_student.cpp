@@ -21,6 +21,10 @@ double myFunc(const double x);
 int main(int argc, char* argv[])
 {
 
+	// MODIFIED 
+	// HELLO ±³¼ö´Ô
+
+
 	// PART 1
 	printf("\n**************************************************");
 	printf("\n|                     PART 1.                    |");
