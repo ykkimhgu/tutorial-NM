@@ -67,6 +67,18 @@ Matrix invA_lu = inv(matA, "LU");
 
 # Numerical Differentiation
 
+## gradientFunc()
+
+Solves for numerical gradient  (dy/dt) from  given equation
+
+```c
+Matrix gradientFunc(double func(double t), double xin);
+```
+
+#### Parameters
+
+* **func**: a function as input argument 
+
 ## gradient()
 
 Solves for numerical gradient  (dy/dt) from  a set of discrete data
